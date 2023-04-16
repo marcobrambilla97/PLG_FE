@@ -1,0 +1,230 @@
+/*
+* ------------------------------------------------------------------------
+
+* Playground Responsive Styles - [Table of Contents]
+ 
+* 1. Resolution <= 1024px 
+* 2. Resolution <= 768px 
+* 3. Resolution <= 575px 
+
+* ------------------------------------------------------------------------
+*/
+
+
+/* ------------------------------------------------------------------------ */
+/* 1. Resolution <= 1024px  */
+/* ------------------------------------------------------------------------ */
+
+@media screen and (max-width: 1024px) {
+
+    .banner__row .banner__col.banner__image,
+    .banner__row .banner__col {
+        max-width: 50%;
+    }
+
+    .cards {
+        padding-bottom: 8rem;
+    }
+
+    .cards__row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-bottom: 2rem;
+    }
+
+    .card {
+        margin: auto;
+        min-width: 380px;
+        max-width: 380px;
+        min-height: 385px;
+    }
+
+    .contacts .contacts__info {
+        margin: 0;
+    }
+
+    .contacts__col.flex-2 {
+        padding: 0 4rem;
+    }
+}
+
+/* ------------------------------------------------------------------------ */
+/* 2. Resolution <= 768px  */
+/* ------------------------------------------------------------------------ */
+
+@media screen and (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav ul {
+        position: fixed;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--black);
+        width: 100%;
+        overflow: hidden;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 10;
+        height: 100vh;
+    }
+
+    header.menu--open nav ul {
+        transform: translateX(0);
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    header nav ul li a {
+        font-family: 'Gotham-Bold';
+        font-size: 2.6rem;
+    }
+
+    h2 br {
+        content: ' ';
+    }
+
+    input:not([type="submit"]),
+    textarea {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        font-size: 1.6rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .swiper-button-prev {
+        left: var(--swiper-navigation-sides-offset, 1rem)
+    }
+
+    .swiper-button-next {
+        right: var(--swiper-navigation-sides-offset, 1rem)
+    }
+
+    .tabs__row .tabs__col ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), black, black, black, black, black, black, black, black, black, black, black);
+        -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), black, black, black, black, black, black, black, black, black, black, black);
+        padding-bottom: 1rem;
+    }
+
+    .banner__row .banner__col,
+    .banner__row .banner__col.banner__image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .banner__row .banner__col.banner__image figure img {
+        min-height: unset;
+    }
+
+    .banner__row .banner__col:not(.banner__image) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .banner.bg-black {
+        background-color: var(--white);
+    }
+
+    .banner.bg-black .color-white {
+        color: var(--black);
+    }
+
+    .banner .cta {
+        color: var(--black);
+        border: 1px solid var(--black);
+    }
+
+    .banner .cta::after {
+        background-color: var(--black);
+    }
+
+    .banner .cta:hover {
+        color: var(--white);
+    }
+
+    .tabs__row .tabs__col ul li {
+        min-width: 285px;
+        flex: 1;
+        margin: 0 0.2rem 0 0;
+    }
+
+    .contacts .contacts__info {
+        margin: 0 0 4rem 0;
+    }
+
+    .contacts__col.flex-2 {
+        padding: 0;
+    }
+
+    .contacts__inputs {
+        gap: 0;
+    }
+
+    .cookie__text p {
+        text-align: center;
+    }
+
+}
+
+/* ------------------------------------------------------------------------ */
+/* 3. Resolution <= 575px  */
+/* ------------------------------------------------------------------------ */
+
+@media screen and (max-width: 575px) {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 5rem;
+    }
+
+    .mw,
+    .banner__row .banner__col:not(.banner__image),
+    .tabs__col:last-child {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .cards__row {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .card {
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .footer__socials {
+        gap: 3rem;
+    }
+}

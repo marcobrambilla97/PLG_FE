@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/common-classes.css">
+    <link rel="stylesheet" href="styles/swiper-custom.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <title>Playground Test FE | Marco Brambilla</title>
+</head>
+
+<body>
+
+    <!-- START: HEADER -->
+    <header class="header">
+        <div class="header__row mw flex align-center">
+            <div class="header__logo">
+                <a href="#hero" target="_self" aria-label="Back to Top">
+                    <img src="assets/images/logo-playground-white.png" alt="Playground">
+                </a>
+            </div>
+            <nav>
+                <ul class="flex align-center">
+                    <li>
+                        <a href="#weare" target="_self">we are</a>
+                    </li>
+                    <li>
+                        <a href="#wedo" target="_self">we do</a>
+                    </li>
+                    <li>
+                        <a href="#careers" target="_self">careers</a>
+                    </li>
+                    <li>
+                        <a href="#contact-us" target="_self">contact us</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__menu-toggle menu-toggle">
+                <span class="menu-toggle__line menu-toggle__line--one"></span>
+                <span class="menu-toggle__line menu-toggle__line--two"></span>
+                <span class="menu-toggle__line menu-toggle__line--three"></span>
+            </div>
+        </div>
+    </header>
+    <!-- END: HEADER -->
+
+    <main>
+
+        <!-- START: HERO SECTION -->
+        <section class="hero relative" id="hero">
+
+            <div class="hero__title mw color-white">
+                <h1>lorem<br>ipsum.</h1>
+                <p>Consectetur adipiscing elit.<br>
+                    Nulla condimentum tortor sem,<br>
+                    in semper nisl bibendum eu.</p>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/images/slide-hello.jpg" alt="Hero Slider Image Hello">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/slide-circle.jpg" alt="Hero Slider Image Cirlce">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/slide-play.jpg" alt="Hero Slider image Play">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <!-- END: HERO SECTION -->
+
+        <!-- START: CARDS SECTION -->
+        <div class="cards bg-lightgray">
+            <div class="cards__container mw">
+                <div class="cards__row py-100 flex">
+                    <div class="card flex-1 bg-white">
+                        <div class="card__upper">
+                            <figure>
+                                <img src="assets/images/card-play-harder.png" alt="Play Harder" class="obj-fit-cover">
+                            </figure>
+                            <p class="txt-center">Aenean mollis dolor a mattis viverra. In hac habitasse platea
+                                dictumst.
+                                Curabitur tempus dui
+                                tortor, et bibendum lacus eleifend ut.</p>
+                        </div>
+                        <a href="" target="_blank" class="card__cta cta txt-center bg-black">Read More</a>
+                    </div>
+                    <div class="card flex-1 bg-white">
+                        <div class="card__upper">
+                            <figure>
+                                <img src="assets/images/card-simplicity.png" alt="Simplicity" class="obj-fit-cover">
+                            </figure>
+                            <p class="txt-center">Donec vitae augue tellus. Proin et urna sit amet metus fermentum
+                                dapibus
+                                non quis urna.</p>
+                        </div>
+                        <a href="" target="_blank" class="card__cta cta txt-center bg-black">Read More</a>
+                    </div>
+                    <div class="card flex-1 bg-white">
+                        <div class="card__upper">
+                            <figure>
+                                <img src="assets/images/card-innovation.png" alt="Innovation" class="obj-fit-cover">
+                            </figure>
+                            <p class="txt-center">Suspendisse vehicula, lectus sed molestie aliquam, arcu neque gravida
+                                lacus.</p>
+                        </div>
+                        <a href="" target="_blank" class="card__cta cta txt-center bg-black">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: CARDS SECTION -->
+
+        <!-- START: WE ARE BANNER SECTION -->
+        <section id="weare">
+            <div class="banner bg-black">
+                <div class="banner__row row flex align-center">
+                    <div class="banner__col banner__image">
+                        <figure>
+                            <img src="assets/images/banner-we-are.jpg" alt="We are" class="obj-fit-cover">
+                        </figure>
+                    </div>
+                    <div class="banner__col color-white">
+                        <h2>we<br> are.</h2>
+                        <p class="mb-30">Consectetur adipiscing elit.<br>
+                            Nulla condimentum tortor sem.</p>
+                        <div class="cta has-icon fit-content">
+                            <a href="#" target="_self">The players</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: WE ARE BANNER SECTION -->
+
+        <!-- START: WE DO BANNER SECTION -->
+        <section id="wedo">
+            <div class="banner">
+                <div class="banner__row row flex row-reverse align-center">
+                    <div class="banner__col banner__image">
+                        <figure>
+                            <img src="assets/images/banner-we-do.jpg" alt="We do" class="obj-fit-cover">
+                        </figure>
+                    </div>
+                    <div class="banner__col">
+                        <h2>we<br> do.</h2>
+                        <p class="mb-30">Consectetur adipiscing elit.<br>
+                            Nulla condimentum tortor sem.</p>
+                        <div class="cta has-icon black-stroke fit-content">
+                            <a href="#" target="_self">The projects</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: WE DO BANNER SECTION -->
+
+        <!-- START: CAREERS BANNER SECTION -->
+        <section id="careers">
+            <div class="banner bg-black">
+                <div class="banner__row row flex align-center">
+                    <div class="banner__col banner__image">
+                        <figure>
+                            <img src="assets/images/banner-carrers.jpg" alt="Careers" class="block obj-fit-cover">
+                        </figure>
+                    </div>
+                    <div class="banner__col color-white">
+                        <h2>careers.</h2>
+                        <p class="mb-30">Consectetur adipiscing elit.<br>
+                            Nulla condimentum tortor sem.</p>
+                        <div class="cta has-icon fit-content">
+                            <a href="#" target="_self">The positions</a>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: CAREERS BANNER SECTION -->
+
+        <!-- START: AJAX TABS SECTION -->
+        <div class="tabs bg-lightgray">
+            <div class="tabs__container">
+                <div class="tabs__row row flex mw py-100">
+                    <div class="tabs__col flex-1">
+                        <ul>
+                            <li class="tabs__link txt-center" data-tab="tab1">Vestibulum at odio sit amet
+                                <i class="fas fa-chevron-up"></i>
+                            </li>
+                            <li class="tabs__link txt-center" data-tab="tab2">Sed vehicula neque
+                                <i class="fas fa-chevron-up"></i>
+                            </li>
+                            <li class="tabs__link txt-center" data-tab="tab3">Nulla id libero pretium
+                                <i class="fas fa-chevron-up"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tabs__col bg-white relative flex-2">
+                        <div class="tabs__content" id="content"></div>
+                        <div class="loader">
+                            <img src="assets/images/loader.png" class="loader__spinner" alt="loading...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: AJAX TABS SECTION -->
+
+        <!-- START: CONTACTS SECTION -->
+        <section class="contacts" id="contact-us">
+            <div class="contacts__container bg-black">
+                <div class="contacts__row row flex mw py-100">
+
+                    <div class="contacts__col color-white flex-1">
+                        <div class="contacts__info fit-content">
+                            <h2>contact<br> us.</h2>
+                            <span>
+                                Playground srl<br>
+                                Via G. Mazzini 3/C,<br>
+                                Cernusco Sul Naviglio (Milano)<br>
+                                -<br>
+                                T <a href="tel:+390240706003" target="_self" rel="noreferrer">+39 0240706003</a><br>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="contacts__col flex-2">
+                        <form>
+                            <div class="contacts__inputs row flex align-center">
+                                <input type="text" name="name" id="name" placeholder="name">
+                                <input type="text" name="last-name" id="last-name" placeholder="last name">
+                            </div>
+                            <div class="input-has-alert relative">
+                                <input type="text" name="email" id="email" placeholder="email*" required="">
+                                <div class="alert alert__email">
+                                    <p class="alert__text" id="emailAlert"></p>
+                                </div>
+                            </div>
+                            <div class="input-has-alert relative">
+                                <textarea name="message" id="message" placeholder="message*" required=""></textarea>
+                                <div class="alert alert__message">
+                                    <p class="alert__text" id="messageAlert"></p>
+                                </div>
+                            </div>
+                            <div class="cta filled-white has-icon fit-content txt-center justify-center">
+                                <input type="submit" value="SEND" id="submit" disabled>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- END: CONTACTS SECTION -->
+
+    </main>
+
+    <!-- START: FOOTER -->
+    <footer class="bg-black">
+        <div class="footer__row mw py-50">
+            <figure class="mb-50">
+                <a href="#hero" target="_self" aria-label="Back to top">
+                    <img src="assets/images/logo-playground-white.png" alt="Playground" class="m-auto">
+                </a>
+            </figure>
+            <nav class="mb-50">
+                <ul class="flex align-center justify-center">
+                    <li>
+                        <a href="#weare" target="_self">we are</a>
+                    </li>
+                    <li>
+                        <a href="#wedo" target="_self">we do</a>
+                    </li>
+                    <li>
+                        <a href="#careers" target="_self">careers</a>
+                    </li>
+                    <li>
+                        <a href="#contact-us" target="_self">contact us</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__socials flex align-center justify-center">
+                <a href="https://www.facebook.com/playground.digital.agency/" target="_blank" rel="noreferrer">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/playground-digital-agency/" target="_blank" rel="noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/playground_agency/" target="_blank" rel="noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- END: FOOTER -->
+
+    <!-- START: COOKIE BANNER -->
+    <div class="cookie__overlay">
+        <div class="cookie bg-white">
+            <div class="cookie__text row flex align-center justify-center mw">
+                <p>Our website uses cookies to improve your experience. To find out more about the cookies we
+                    use
+                    please see our Cookies Policy.
+                </p>
+                <button class="cta cta--small filled-black" id="closeCookieConsent">OK</button>
+            </div>
+        </div>
+    </div>
+    <!-- END: COOKIE BANNER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

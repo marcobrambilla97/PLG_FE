@@ -1,0 +1,258 @@
+/*
+* ------------------------------------------------------------------------
+
+* Playground Common Styles - [Table of Contents]
+ 
+* 1. Fonts
+* 2. Common 
+* 3. Typography
+* 4. Buttons and Inputs
+* 5. CTA variants
+
+* ------------------------------------------------------------------------
+*/
+
+
+/* ------------------------------------------------------------------------ */
+/* 1. Fonts
+/* ------------------------------------------------------------------------ */
+
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../assets/fonts/Gotham-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../assets/fonts/Gotham-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../assets/fonts/Gotham-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* 2. Common
+/* ------------------------------------------------------------------------ */
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #cccccc;
+    --light-gray: #ebebeb;
+    --swiper-theme-color: #706E67;
+    --swiper-navigation-size: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham-Book';
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #000000;
+    font-size: 1.4rem;
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+/* ------------------------------------------------------------------------ */
+/* 3. Typography
+/* ------------------------------------------------------------------------ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Gotham-Bold';
+    font-size: 7rem;
+    margin-bottom: 3rem;
+    line-height: 1;
+}
+
+
+ul li a:hover {
+    font-family: 'Gotham-Medium';
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------ */
+/* 4. Buttons and Inputs
+/* ------------------------------------------------------------------------ */
+
+button,
+input,
+textarea,
+.cta {
+    border: 1px solid;
+    padding: 1.4rem 2rem;
+    border-radius: 0;
+    outline: none;
+}
+
+input:not([type="submit"]),
+textarea {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    margin-bottom: 1.3rem;
+}
+
+textarea {
+    height: 180px;
+}
+
+input[type="submit"] {
+    background-color: unset;
+    border: none;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+input:disabled {
+    cursor: not-allowed;
+    color: var(--black);
+}
+
+button,
+.cta {
+    position: relative;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    min-width: 165px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.cta:hover {
+    color: var(--black)
+}
+
+.cta::after {
+    background-color: var(--white);
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.cta:hover::after {
+    height: 100%;
+    transform: translateY(0);
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* 5. CTA variants
+/* ------------------------------------------------------------------------ */
+
+/* Small CTA */
+.cta.cta--small {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    min-width: 100px;
+}
+
+/* CTA with icon */
+.cta.has-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Black Stroke CTA */
+.cta.black-stroke {
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.cta.black-stroke::after {
+    background-color: var(--black);
+}
+
+.cta.black-stroke:hover {
+    color: var(--white);
+}
+
+/* Black Background CTA */
+.cta.bg-black:hover {
+    color: var(--black);
+}
+
+.cta.filled-black {
+    border: 1px solid var(--black);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.cta.filled-black:hover {
+    color: var(--black);
+}
+
+/* White Background CTA */
+.cta.filled-white {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.cta.filled-white input {
+    font-family: 'Gotham-Bold';
+    letter-spacing: 0.15em;
+}
+
+.cta.filled-white::after {
+    background-color: var(--black);
+}
+
+.cta.filled-white:hover,
+.cta.filled-white:hover input {
+    color: var(--white);
+}

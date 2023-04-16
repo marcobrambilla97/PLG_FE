@@ -1,0 +1,325 @@
+/*
+* ------------------------------------------------------------------------
+
+* Playground Styles - [Table of Contents]
+ 
+* 1. Header
+* 2. Menu 
+* 3. Hero Section
+* 4. Cards Section
+* 5. Three Banners Sections
+* 6. AJAX Tabs Section
+* 7. Contacts Section
+* 8. Footer
+* 9. Cookie Banner
+
+* ------------------------------------------------------------------------
+*/
+
+
+/* ------------------------------------------------------------------------ */
+/* 1. Header
+/* ------------------------------------------------------------------------ */
+
+header {
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header__bg {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.header__row {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    justify-content: space-between;
+}
+
+.header__logo {
+    z-index: 100;
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* 2. Menu
+/* ------------------------------------------------------------------------ */
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu-toggle__line {
+    background-color: var(--white);
+    display: block;
+    height: 0.3rem;
+    margin: 0.6rem 0;
+    transition: .25s;
+    width: 4rem;
+}
+
+.menu-toggle__line--two {
+    margin-left: auto;
+    width: 2.5rem;
+}
+
+header.menu--open .menu-toggle__line--one {
+    -webkit-transform: rotate(-45deg) translate(-6px, 8px);
+    transform: rotate(-45deg) translate(-6px, 8px);
+}
+
+header.menu--open .menu-toggle__line--two {
+    opacity: 0;
+}
+
+header.menu--open .menu-toggle__line--three {
+    -webkit-transform: rotate(45deg) translate(-4px, -8px);
+    transform: rotate(45deg) translate(-4px, -8px);
+}
+
+nav ul {
+    gap: 6rem;
+}
+
+nav ul li a {
+    color: var(--white);
+}
+
+/* ------------------------------------------------------------------------ */
+/* 3. Hero Section
+/* ------------------------------------------------------------------------ */
+
+.hero__title {
+    position: absolute;
+    top: calc(50% - 8.2rem);
+    left: 15%;
+    z-index: 10;
+}
+
+.hero .swiper img {
+    object-fit: cover;
+    -o-object-fit: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------------ */
+/* 4. Cards Section
+/* ------------------------------------------------------------------------ */
+
+.cards__row {
+    gap: 3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+}
+
+.card figure {
+    width: 100%;
+    height: 133px;
+}
+
+.card p {
+    font-size: 1.6rem;
+    padding: 4rem 2rem;
+}
+
+.card .card__cta {
+    color: var(--white);
+    border: 1px solid var(--black);
+    padding: 1.5rem;
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------------ */
+/* 5. Three Banners Sections
+/* ------------------------------------------------------------------------ */
+
+.banner__row .banner__col {
+    max-width: 40%;
+}
+
+.banner__row .banner__col:not(.banner__image) {
+    padding: 9%;
+}
+
+.banner__row .banner__col.banner__image {
+    max-width: 60%;
+}
+
+.banner__row .banner__col.banner__image figure img {
+    min-height: 570px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* 6. AJAX Tabs Section
+/* ------------------------------------------------------------------------ */
+
+.tabs__col ul li {
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    padding: 2rem;
+    background-color: var(--gray);
+    margin-bottom: 0.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.tabs__col ul li:not(.active):hover {
+    background-color: #dddddd;
+}
+
+.tabs__col ul li i {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.tabs__col ul li.active {
+    font-family: 'Gotham-Bold';
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.tabs__col ul li.active i {
+    transform: rotate(180deg);
+}
+
+.tabs__col:last-child {
+    padding: 4rem;
+}
+
+.tabs__col .tabs__content {
+    margin: auto;
+    max-width: 680px;
+    min-height: 250px;
+}
+
+.loader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader__spinner {
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------------------------------------------------------ */
+/* 7. Contacts Section
+/* ------------------------------------------------------------------------ */
+
+.contacts .contacts__info {
+    margin: auto;
+}
+
+.contacts form {
+    margin: auto;
+    max-width: 680px;
+}
+
+.cookie__text,
+.contacts__inputs {
+    gap: 2rem;
+}
+
+.alert {
+    position: absolute;
+    right: 2rem;
+    top: calc(50% - 0.95rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    transition: all 0.3s ease-in-out;
+}
+
+.alert .alert__text {
+    display: none;
+    font-weight: 700;
+    padding: 0.3rem 1.2rem;
+    background-color: #E74C3C;
+    border-radius: 50px;
+    color: var(--white);
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+form .input-has-alert .alert__message {
+    top: 1.4rem;
+}
+
+/* ------------------------------------------------------------------------ */
+/* 8. Footer
+/* ------------------------------------------------------------------------ */
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer__socials {
+    gap: 1.5rem;
+}
+
+.footer__socials i {
+    font-size: 2.2rem;
+    color: var(--gray)
+}
+
+/* ------------------------------------------------------------------------ */
+/* 9. Cookie Banner
+/* ------------------------------------------------------------------------ */
+
+.cookie__overlay {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+.cookie__overlay::before {
+    content: '';
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.cookie__text {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.cookie__text p {
+    line-height: 1.4;
+}

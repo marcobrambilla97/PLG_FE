@@ -1,0 +1,31 @@
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    transform: scaleY(1.5);
+}
+
+.swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 5rem)
+}
+
+.swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 5rem)
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 2rem);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 0.8rem)
+}
+
+.swiper-pagination-bullet {
+    opacity: 1;
+    background-color: var(--swiper-theme-color);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--white);
+}
